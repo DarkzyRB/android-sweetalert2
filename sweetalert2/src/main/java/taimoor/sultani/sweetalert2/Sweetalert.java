@@ -364,6 +364,10 @@ public class Sweetalert extends Dialog implements View.OnClickListener {
         return this;
     }
 
+    public Sweetalert setContentText(int resId) {
+        return setContentText(getContext().getResources().getString(resId));
+    }
+
     public static int spToPx(float sp, Context context) {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, sp, context.getResources().getDisplayMetrics());
     }
@@ -440,6 +444,10 @@ public class Sweetalert extends Dialog implements View.OnClickListener {
             mConfirmButton.setText(mConfirmText);
         }
         return this;
+    }
+
+    public Sweetalert setConfirmText(int resId) {
+        return setConfirmText(getContext().getResources().getString(resId));
     }
 
     public Sweetalert setConfirmButtonBackgroundColor(String color) {
@@ -545,6 +553,10 @@ public class Sweetalert extends Dialog implements View.OnClickListener {
             mNeutralButton.setText(mNeutralText);
         }
         return this;
+    }
+
+    public Sweetalert setNeutralText(int resId) {
+        return setNeutralText(getContext().getResources().getString(resId));
     }
 
     public Sweetalert setNeutralClickListener(OnSweetClickListener listener) {
